@@ -210,7 +210,7 @@ sig
   (** {3 Struct and union types} *)
   type ('a, 't) field
 
-  val structure : string -> 's Ctypes_static.structure typ
+  val structure : ?compact: bool -> string -> 's Ctypes_static.structure typ
   (** Construct a new structure type.  The type value returned is incomplete and
       can be updated using {!field} until it is passed to {!seal}, at which point
       the set of fields is fixed.
