@@ -32,6 +32,10 @@
 #error "No suitable pointer-sized integer type available"
 #endif
 
+#ifndef LLONG_MAX
+#define LLONG_MAX __LONG_LONG_MAX__
+#endif
+
 /* long long is at least 64 bits. */
 #if LLONG_MAX == 9223372036854775807LL
 #define ctypes_ffi_type_sllong ffi_type_sint64
